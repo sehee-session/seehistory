@@ -1,4 +1,4 @@
-import { Terminal } from '../shared/ui';
+import { Terminal } from '/shared/ui';
 
 export const meta = () => {
   return [
