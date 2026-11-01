@@ -18,8 +18,7 @@ const Page = () => (
     <section className={styles.hero}>
       <Terminal text="Write and Share your development history." />
       <p className={styles.description}>
-        Every developer has a story. Document your journey, share what you've
-        learned, and grow together.
+        Your ideas, experiences, and discoveries deserve a place of their own.
       </p>
       <div className={styles.actions}>
         <Button variant="primary">Get started →</Button>

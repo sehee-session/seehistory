@@ -1,22 +1,32 @@
-import { BookOpenIcon, Share2Icon, TrendingUpIcon } from 'lucide-react';
+import {
+  BookOpenIcon,
+  FileCodeIcon,
+  Share2Icon,
+  TrendingUpIcon,
+} from 'lucide-react';
 import { Card } from '~/shared/ui/card';
 import * as styles from './intro.css';
 
 const features = [
   {
     icon: BookOpenIcon,
-    title: '기록하기',
-    description: '개발하면서 배운 지식과 경험을 정리해요.',
+    title: 'Document Your Journey',
+    description: 'Capture what you learn and the experiences you gain.',
+  },
+  {
+    icon: FileCodeIcon,
+    title: 'Write with Markdown',
+    description: 'Create beautiful posts with Markdown, code blocks, and more.',
   },
   {
     icon: Share2Icon,
-    title: '공유하기',
-    description: '나의 개발 이야기를 다른 사람과 나눠요.',
+    title: 'Share Your Knowledge',
+    description: 'Share your development journey with the community.',
   },
   {
     icon: TrendingUpIcon,
-    title: '성장하기',
-    description: '기록을 쌓으며 성장 과정을 확인해요.',
+    title: 'Grow Together',
+    description: 'Track your progress and grow with every experience.',
   },
 ];
 
@@ -24,9 +34,10 @@ export const Intro = () => (
   <section className={styles.container}>
     <ul className={styles.featureList}>
       <div className={styles.heading}>
-        <h2>개발자의 성장 과정을 기록하세요.</h2>
-        <p>배운 것을 기록하고, 경험을 공유하며 함께 성장해 보세요.</p>
+        <h2>Every Developer Has a Story.</h2>
+        <p>Document your journey, share what you learn, and grow together.</p>
       </div>
+
       {features.map(({ icon: Icon, title, description }) => (
         <li key={title}>
           <Card className={styles.featureCard}>

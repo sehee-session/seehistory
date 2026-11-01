@@ -9,7 +9,7 @@ export const Header = ({ text }: HeaderProps) => (
   <ul className={styles.header}>
     <li className={styles.logo}>{text}</li>
     <li>
-      <Button variant="secondary">로그인</Button>
+      <Button variant="secondary">Sign In</Button>
     </li>
   </ul>
 );
