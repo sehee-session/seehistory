@@ -1,6 +1,6 @@
 // Terminal.tsx
-import { useTyping } from '../../hook/use-typing.tsx';
-import * as s from './index.css.ts';
+import { useTyping } from '../hook/use-typing.tsx';
+import * as s from './terminal.css.ts';
 
 export const Terminal = ({ text }: { text: string }) => {
   const out = useTyping(text);

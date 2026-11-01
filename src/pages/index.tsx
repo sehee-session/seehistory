@@ -1,4 +1,4 @@
-import { Terminal } from '/shared/ui';
+import { Header, Terminal } from '/shared/ui';
 
 export const meta = () => {
   return [
@@ -9,6 +9,7 @@ export const meta = () => {
 
 const Page = () => (
   <main>
+    <Header text="~/" />
     <Terminal text="Write and Share your development history." />
   </main>
 );
