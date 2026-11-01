@@ -1,17 +1,16 @@
+import { Terminal } from '../shared/ui';
+
 export const meta = () => {
   return [
-    { title: 'See-History' },
+    { title: 'Seehistory' },
     { name: 'Write and Share Your development history' },
   ];
 };
 
-const Page = () => {
-  return (
-    <main>
-      <h1>SeeHistory</h1>
-      <h2>Show your development history.</h2>
-    </main>
-  );
-};
+const Page = () => (
+  <main>
+    <Terminal text="Write and Share your development history." />
+  </main>
+);
 
 export default Page;
