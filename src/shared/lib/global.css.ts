@@ -1,11 +1,10 @@
 import { globalStyle } from '@vanilla-extract/css';
-import { vars } from './theme.css';
 
-globalStyle('*, *::before, *::after', { boxSizing: 'border-box' });
+globalStyle('*, *::before, *::after', { boxSizing: 'border-box', margin: 0 });
 
 globalStyle('body', {
   margin: 0,
-  background: vars.color.bg,
-  color: vars.color.fg,
   fontFamily: 'system-ui, sans-serif',
 });
+
+globalStyle('root', { isolation: 'isolate' });

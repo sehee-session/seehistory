@@ -1,12 +1,17 @@
 export const meta = () => {
   return [
-    { title: 'New React Router App' },
-    { name: 'description', content: 'Welcome to React Router!' },
+    { title: 'See-History' },
+    { name: 'Write and Share Your development history' },
   ];
 };
 
 const Page = () => {
-  return 'HOME';
+  return (
+    <main>
+      <h1>SeeHistory</h1>
+      <h2>Show your development history.</h2>
+    </main>
+  );
 };
 
 export default Page;
