@@ -1,5 +1,6 @@
 import { Button, Terminal } from '~/shared/ui';
 import { Header } from '~/widgets/header';
+import { Intro } from '~/widgets/intro';
 import * as styles from './home.css';
 
 export const meta = () => [
@@ -16,17 +17,16 @@ const Page = () => (
 
     <section className={styles.hero}>
       <Terminal text="Write and Share your development history." />
-
       <p className={styles.description}>
         Every developer has a story. Document your journey, share what you've
         learned, and grow together.
       </p>
-
       <div className={styles.actions}>
         <Button variant="primary">Get started →</Button>
         <Button variant="secondary">Explore posts</Button>
       </div>
     </section>
+    <Intro />
   </main>
 );
 
