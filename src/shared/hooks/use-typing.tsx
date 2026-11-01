@@ -1,4 +1,3 @@
-// useTyping.ts
 import React from 'react';
 
 type Options = {
