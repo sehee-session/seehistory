@@ -6,7 +6,7 @@ import {
 } from '@react-router/dev/routes';
 
 export default [
-  index('pages/index.tsx'),
+  index('pages/home.tsx'),
   ...prefix(':nickname', [
     index('pages/profile.tsx'),
     route('articles', 'pages/articles.tsx'),

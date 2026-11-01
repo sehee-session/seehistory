@@ -45,11 +45,13 @@ globalStyle('html', {
 });
 
 globalStyle('body', {
+  margin: 'auto',
   minHeight: '100vh',
+  maxWidth: '767px',
   fontFamily: 'Inter, system-ui, sans-serif',
-  lineHeight: 1.5,
   backgroundColor: vars.color.bg,
   color: vars.color.text,
+  lineHeight: 1.5,
 });
 
 globalStyle('.root', {

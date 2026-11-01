@@ -9,11 +9,11 @@ const blink = keyframes({
 export const terminal = style({
   whiteSpace: 'pre-wrap',
   wordBreak: 'break-word',
+  textAlign: 'left',
+  alignSelf: 'stretch',
   color: vars.color.bg,
   background: vars.color.text,
-  padding: vars.spacing.md,
 });
-
 export const prompt = style({
   color: vars.color.accent,
 });
