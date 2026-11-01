@@ -1,0 +1,16 @@
+import { style } from '@vanilla-extract/css';
+import { vars } from '~/shared/lib/theme.css';
+
+export const header = style({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  width: '100%',
+  padding: `${vars.spacing.md} ${vars.spacing.lg}`,
+});
+
+export const logo = style({
+  fontSize: vars.fontSize.xl,
+  fontWeight: 700,
+  letterSpacing: '-0.04em',
+});

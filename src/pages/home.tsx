@@ -1,5 +1,6 @@
+import { Button, Terminal } from '~/shared/ui';
+import { Header } from '~/widgets/header';
 import * as styles from './home.css';
-import { Button, Header, Terminal } from '/shared/ui';
 
 export const meta = () => [
   { title: 'Seehistory' },
