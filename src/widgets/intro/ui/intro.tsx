@@ -17,7 +17,7 @@ const features = [
     icon: FileCodeIcon,
     title: 'Write with Markdown',
     description:
-      'Create beautiful articles with Markdown, code blocks, and more.',
+      'Create beautiful stories with Markdown, code blocks, and more.',
   },
   {
     icon: Share2Icon,

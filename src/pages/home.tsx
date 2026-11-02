@@ -22,7 +22,7 @@ const Page = () => (
       </p>
       <div className={styles.actions}>
         <Button variant="primary">Get started →</Button>
-        <Button variant="secondary">Explore articles</Button>
+        <Button variant="secondary">Explore stories</Button>
       </div>
     </section>
     <Intro />
