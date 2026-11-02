@@ -1,4 +1,5 @@
 import { Tabs } from '@base-ui/react/tabs';
+import { RssIcon, TrendingUpIcon } from 'lucide-react';
 import { useSearchParams } from 'react-router';
 import { StoryCard } from '~/entities/story';
 import { Header } from '~/widgets/header';
@@ -19,8 +20,8 @@ const TAB = {
 } as const;
 
 const tabs = [
-  { label: 'Trending', value: TAB.TRENDING },
-  { label: 'Latest', value: TAB.LATEST },
+  { label: 'Trending', value: TAB.TRENDING, Icon: TrendingUpIcon },
+  { label: 'Latest', value: TAB.LATEST, Icon: RssIcon },
 ];
 
 const Page = () => {
@@ -53,9 +54,9 @@ const Page = () => {
         onValueChange={handleTabChange}
       >
         <Tabs.List className={styles.list}>
-          {tabs.map(({ label, value }) => (
+          {tabs.map(({ label, value, Icon }) => (
             <Tabs.Tab key={value} className={styles.tab} value={value}>
-              {label}
+              {<Icon size={16} />} {label}
             </Tabs.Tab>
           ))}
           <Tabs.Indicator className={styles.indicator} />

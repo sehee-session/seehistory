@@ -24,6 +24,10 @@ export const tab = style({
   fontWeight: 600,
   cursor: 'pointer',
   transition: 'color 150ms ease',
+  display: 'flex',
+  flexDirection: 'row',
+  gap: vars.spacing.sm,
+  alignItems: 'center',
 
   selectors: {
     '&[data-active]': {
