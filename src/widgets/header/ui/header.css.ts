@@ -6,7 +6,7 @@ export const header = style({
   alignItems: 'center',
   justifyContent: 'space-between',
   width: '100%',
-  padding: `${vars.spacing.md} 0`,
+  padding: `${vars.spacing.md}`,
 });
 
 export const logo = style({
