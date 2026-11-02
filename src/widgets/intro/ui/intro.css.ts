@@ -10,7 +10,7 @@ export const container = style({
 export const heading = style({
   display: 'flex',
   flexDirection: 'column',
-  gap: vars.spacing.sm,
+  gap: vars.spacing.md,
 });
 
 export const featureList = style({
@@ -18,7 +18,7 @@ export const featureList = style({
   flexDirection: 'column',
   gap: vars.spacing.md,
   margin: 0,
-  padding: vars.spacing.md,
+  padding: vars.spacing.lg,
   listStyle: 'none',
 });
 
