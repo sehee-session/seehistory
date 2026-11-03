@@ -92,7 +92,7 @@ export const cursor = style({
   display: 'inline-block',
   width: '7px',
   height: '16px',
-  backgroundColor: vars.color.accent,
+  backgroundColor: vars.color.terminal.text,
   animation: `${blink} 1s step-end infinite`,
   verticalAlign: 'middle',
 
