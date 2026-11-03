@@ -58,7 +58,7 @@ const TerminalLineView = ({ line, showCursor }: TerminalLineViewProps) => (
     {line.type === 'command' && (
       <>
         <span className={styles.prompt}>~/heestory</span>
-        {' $ '}
+        <span className={styles.commandSymbol}> $ </span>
       </>
     )}
 

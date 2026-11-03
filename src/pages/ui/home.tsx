@@ -14,7 +14,7 @@ export const meta = () => [
 const Page = () => {
   return (
     <main>
-      <Header text="~/" />
+      <Header text="" />
 
       <section className={styles.hero}>
         <Terminal

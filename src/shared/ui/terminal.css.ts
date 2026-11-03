@@ -133,3 +133,7 @@ export const lineText = {
     color: vars.color.terminal.green,
   }),
 };
+
+export const commandSymbol = style({
+  color: vars.color.terminal.green,
+});

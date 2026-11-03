@@ -46,7 +46,7 @@ const Page = () => {
 
   return (
     <main>
-      <Header text="~/stories" />
+      <Header text="stories" />
 
       <Tabs.Root
         className={styles.root}
