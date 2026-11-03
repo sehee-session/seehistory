@@ -31,7 +31,7 @@ export const buttonVariants = styleVariants({
     base,
     {
       backgroundColor: vars.color.accent,
-      color: '#ffffff',
+      color: vars.color.bg,
       border: `1px solid ${vars.color.accent}`,
 
       ':hover': {

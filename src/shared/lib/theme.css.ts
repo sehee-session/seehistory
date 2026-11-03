@@ -10,12 +10,28 @@ import { spacing } from './spacing';
 
 export const vars = createThemeContract({
   color: {
+    // base
     bg: null,
     surface: null,
     border: null,
     text: null,
     textDim: null,
+
+    // color
     accent: null,
+    success: null,
+    error: null,
+
+    terminal: {
+      bg: null,
+      surface: null,
+      border: null,
+      text: null,
+      textDim: null,
+      red: null,
+      yellow: null,
+      green: null,
+    },
   },
   spacing: { xs: null, sm: null, md: null, lg: null, xl: null, '2xl': null },
   radius: { sm: null, md: null, lg: null, full: null },
@@ -36,6 +52,17 @@ globalStyle(':root', {
         [vars.color.text]: '#c9d1d9',
         [vars.color.textDim]: '#6e7681',
         [vars.color.accent]: '#A78BFA',
+        [vars.color.error]: '#DC2626',
+        [vars.color.success]: '#16A34A',
+
+        [vars.color.terminal.bg]: '#1c2028',
+        [vars.color.terminal.surface]: '#242a34',
+        [vars.color.terminal.border]: '#303642',
+        [vars.color.terminal.text]: '#e5e7eb',
+        [vars.color.terminal.textDim]: '#9ca3af',
+        [vars.color.terminal.red]: '#f87171',
+        [vars.color.terminal.yellow]: '#fbbf24',
+        [vars.color.terminal.green]: '#4ade80',
       },
     },
   },

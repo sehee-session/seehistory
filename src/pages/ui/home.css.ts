@@ -7,8 +7,6 @@ export const hero = style({
   alignItems: 'center',
   gap: vars.spacing.lg,
   padding: `${vars.spacing['2xl']} ${vars.spacing.lg}`,
-  backgroundColor: vars.color.text,
-  color: vars.color.bg,
 });
 
 export const description = style({
