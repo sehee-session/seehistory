@@ -10,6 +10,7 @@ type StoryCardProps = {
   author: {
     name: string;
     avatarUrl: string | null;
+    nickname: string;
   };
 };
 
@@ -48,7 +49,7 @@ export const StoryCard = ({
           {formatDate(createdAt)}
         </time>
 
-        <div className={styles.author}>
+        <Link to={`/users/${author.nickname}`} className={styles.author}>
           {author.avatarUrl ? (
             <img className={styles.avatar} src={author.avatarUrl} alt="" />
           ) : (
@@ -58,7 +59,7 @@ export const StoryCard = ({
           )}
 
           <span>{author.name}</span>
-        </div>
+        </Link>
       </div>
     </article>
   </Link>

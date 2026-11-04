@@ -1,6 +1,7 @@
 export type Author = {
   name: string;
   avatarUrl: string | null;
+  nickname: string;
 };
 
 export type Story = {
@@ -23,6 +24,7 @@ export const stories: Story[] = [
     author: {
       name: 'John Developer',
       avatarUrl: null,
+      nickname: 'John',
     },
   },
   {
@@ -35,6 +37,7 @@ export const stories: Story[] = [
     author: {
       name: 'Jane Smith',
       avatarUrl: 'https://picsum.photos/seed/avatar1/100/100',
+      nickname: 'Jane',
     },
   },
   {
@@ -47,6 +50,7 @@ export const stories: Story[] = [
     author: {
       name: 'Alex Johnson',
       avatarUrl: null,
+      nickname: 'Alex',
     },
   },
   {
@@ -59,6 +63,7 @@ export const stories: Story[] = [
     author: {
       name: 'Emily Davis',
       avatarUrl: 'https://picsum.photos/seed/avatar2/100/100',
+      nickname: 'Emily',
     },
   },
   {
@@ -71,6 +76,7 @@ export const stories: Story[] = [
     author: {
       name: 'Michael Brown',
       avatarUrl: null,
+      nickname: 'Michael',
     },
   },
 ];

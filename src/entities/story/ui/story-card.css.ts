@@ -8,6 +8,7 @@ export const card = style({
   color: 'inherit',
   textDecoration: 'none',
   backgroundColor: vars.color.surface,
+  borderTop: `1px solid ${vars.color.border}`,
   border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius.lg,
   transition: 'border-color 150ms ease, transform 150ms ease',
