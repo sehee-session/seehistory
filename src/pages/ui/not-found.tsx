@@ -10,22 +10,20 @@ const Page = () => {
   return (
     <main className={styles.root}>
       <div className={styles.content}>
-        <div className={styles.terminal}>
-          <Terminal
-            variant="error"
-            lines={[
-              {
-                text: `find url ${location.pathname}${location.search}${location.hash}`,
-                type: 'command',
-              },
-              {
-                text: '✕ heestory: resource not found',
-                type: 'error',
-              },
-              { text: '', type: 'command' },
-            ]}
-          />
-        </div>
+        <Terminal
+          variant="error"
+          lines={[
+            {
+              text: `find url ${location.pathname}${location.search}${location.hash}`,
+              type: 'command',
+            },
+            {
+              text: '✕ heestory: resource not found',
+              type: 'error',
+            },
+            { text: '', type: 'command' },
+          ]}
+        />
 
         <section className={styles.message}>
           <span className={styles.code}>ERROR 404</span>

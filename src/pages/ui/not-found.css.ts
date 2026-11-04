@@ -14,86 +14,9 @@ export const root = style({
 export const content = style({
   width: '100%',
   maxWidth: '560px',
-});
-
-export const terminal = style({
-  overflow: 'hidden',
-  marginBottom: vars.spacing['2xl'],
-  backgroundColor: '#1c2028',
-  border: '1px solid #303642',
-  borderRadius: vars.radius.lg,
-  boxShadow: '0 20px 60px rgba(0, 0, 0, 0.12)',
-});
-
-export const terminalHeader = style({
-  position: 'relative',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  height: '40px',
-  borderBottom: '1px solid #303642',
-});
-
-export const terminalDots = style({
-  position: 'absolute',
-  left: vars.spacing.md,
-  display: 'flex',
-  gap: vars.spacing.xs,
-});
-
-export const terminalDot = style({
-  width: '8px',
-  height: '8px',
-  borderRadius: '50%',
-});
-
-export const terminalTitle = style({
-  color: '#9ca3af',
-  fontSize: vars.fontSize.xs,
-  fontFamily: 'monospace',
-});
-
-export const terminalBody = style({
   display: 'flex',
   flexDirection: 'column',
   gap: vars.spacing.md,
-  padding: vars.spacing.xl,
-  color: '#e5e7eb',
-  fontSize: vars.fontSize.sm,
-  fontFamily: 'monospace',
-  lineHeight: 1.6,
-});
-
-export const command = style({
-  color: '#e5e7eb',
-});
-
-export const prompt = style({
-  color: vars.color.accent,
-});
-
-export const error = style({
-  color: vars.color.error,
-});
-
-export const cursorLine = style({
-  display: 'flex',
-  alignItems: 'center',
-  gap: vars.spacing.xs,
-});
-
-export const cursor = style({
-  display: 'inline-block',
-  width: '7px',
-  height: '16px',
-  backgroundColor: vars.color.accent,
-  animation: 'blink 1s step-end infinite',
-
-  '@media': {
-    '(prefers-reduced-motion: reduce)': {
-      animation: 'none',
-    },
-  },
 });
 
 export const message = style({
