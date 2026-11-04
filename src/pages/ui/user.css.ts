@@ -5,6 +5,6 @@ export const list = style({
   paddingTop: vars.spacing.lg,
   display: 'grid',
   flexDirection: 'column',
-  gap: vars.spacing.md,
-  gridTemplateColumns: 'repeat(1, 1fr)',
+  gap: vars.spacing.lg,
+  gridTemplateColumns: 'repeat(2, 1fr)',
 });

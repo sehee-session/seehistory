@@ -2,6 +2,7 @@ import { Tabs } from '@base-ui/react/tabs';
 import { RssIcon, TrendingUpIcon } from 'lucide-react';
 import { useSearchParams } from 'react-router';
 import { StoryCard } from '~/entities/story';
+import { UserAuthor } from '~/entities/user';
 import { Header } from '~/widgets/header';
 import { stories } from '../lib/mock.stories';
 import * as styles from './stories.css';
@@ -63,12 +64,18 @@ const Page = () => {
         </Tabs.List>
         <Tabs.Panel className={styles.panel} value={TAB.TRENDING}>
           {stories.map((story) => (
-            <StoryCard key={story.id} {...story} />
+            <article key={story.id}>
+              <UserAuthor {...story.author} />
+              <StoryCard {...story} />
+            </article>
           ))}
         </Tabs.Panel>
         <Tabs.Panel className={styles.panel} value={TAB.LATEST}>
           {stories.map((story) => (
-            <StoryCard key={story.id} {...story} />
+            <article key={story.id}>
+              <UserAuthor {...story.author} />
+              <StoryCard {...story} />
+            </article>
           ))}
         </Tabs.Panel>
       </Tabs.Root>

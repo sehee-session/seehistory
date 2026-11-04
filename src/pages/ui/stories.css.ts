@@ -55,6 +55,6 @@ export const panel = style({
   paddingTop: vars.spacing.lg,
   display: 'grid',
   flexDirection: 'column',
-  gap: vars.spacing.md,
+  gap: vars.spacing.lg,
   gridTemplateColumns: 'repeat(1, 1fr)',
 });

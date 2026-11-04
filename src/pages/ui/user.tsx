@@ -18,7 +18,6 @@ const Page = ({ params }: Route.ComponentProps) => {
   return (
     <main>
       <Header text={`users/${nickname}`} />
-      <h4>Stories</h4>
       <div className={styles.list}>
         {stories.map((story) => (
           <StoryCard key={story.id} {...story} />

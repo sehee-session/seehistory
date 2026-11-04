@@ -8,9 +8,6 @@ export const card = style({
   color: 'inherit',
   textDecoration: 'none',
   backgroundColor: vars.color.surface,
-  borderTop: `1px solid ${vars.color.border}`,
-  border: `1px solid ${vars.color.border}`,
-  borderRadius: vars.radius.lg,
   transition: 'border-color 150ms ease, transform 150ms ease',
 
   ':hover': {
@@ -49,7 +46,7 @@ export const content = style({
   display: 'flex',
   flexDirection: 'column',
   gap: vars.spacing.sm,
-  padding: vars.spacing.lg,
+  padding: vars.spacing.md,
 });
 
 export const title = style({
@@ -59,7 +56,7 @@ export const title = style({
   fontSize: vars.fontSize.lg,
   fontWeight: 700,
   lineHeight: 1.4,
-  WebkitLineClamp: 2,
+  WebkitLineClamp: 1,
   WebkitBoxOrient: 'vertical',
 });
 
@@ -78,40 +75,11 @@ export const footer = style({
   alignItems: 'center',
   justifyContent: 'space-between',
   gap: vars.spacing.sm,
-  margin: `0 ${vars.spacing.lg}`,
-  padding: `${vars.spacing.md} 0`,
+  padding: vars.spacing.md,
   borderTop: `1px solid ${vars.color.border}`,
 });
 
 export const date = style({
   color: vars.color.textDim,
-  fontSize: vars.fontSize.xs,
-});
-
-export const author = style({
-  display: 'flex',
-  alignItems: 'center',
-  gap: vars.spacing.xs,
-  color: vars.color.text,
-  fontSize: vars.fontSize.xs,
-  fontWeight: 600,
-});
-
-export const avatar = style({
-  width: '24px',
-  height: '24px',
-  borderRadius: vars.radius.full,
-  objectFit: 'cover',
-});
-
-export const avatarFallback = style({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: '24px',
-  height: '24px',
-  borderRadius: vars.radius.full,
-  backgroundColor: vars.color.border,
-  color: vars.color.text,
   fontSize: vars.fontSize.xs,
 });
