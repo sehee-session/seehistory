@@ -15,6 +15,7 @@ export const content = style({
   flexDirection: 'column',
   gap: vars.spacing.md,
   flex: 1,
+  padding: vars.spacing.md,
 });
 
 export const message = style({

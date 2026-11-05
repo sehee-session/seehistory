@@ -27,11 +27,7 @@ const Page = () => {
         />
         <section className={styles.message}>
           <span className={styles.code}>ERROR 404</span>
-          <h1 className={styles.heading}>
-            This story
-            <br />
-            doesn't exist.
-          </h1>
+          <h1 className={styles.heading}>This page doesn't exist.</h1>
           <p className={styles.description}>
             Maybe it's lost, moved, or never written. Let's get you back on
             track.

@@ -53,17 +53,16 @@ export const indicator = style({
 
 export const panel = style({
   paddingTop: vars.spacing.lg,
-  display: 'grid',
+  display: 'flex',
   flexDirection: 'column',
-  gap: vars.spacing.sm,
-  gridTemplateColumns: 'repeat(1, 1fr)',
 });
 
 export const panelItem = style({
   selectors: {
     [`${panel} & + &`]: {
       borderTop: `1px solid ${vars.color.border}`,
-      paddingTop: vars.spacing.sm,
+      paddingTop: vars.spacing['2xl'],
+      marginTop: vars.spacing['2xl'],
     },
   },
 });

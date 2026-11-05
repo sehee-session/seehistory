@@ -9,6 +9,7 @@ export const card = style({
   color: 'inherit',
   textDecoration: 'none',
   transition: 'transform 150ms ease',
+  gap: vars.spacing.md,
 
   selectors: {
     '&:focus-visible': {
@@ -23,11 +24,11 @@ export const thumbnail = style({
   alignItems: 'center',
   justifyContent: 'center',
   width: '100%',
-  aspectRatio: '16 / 9',
+  aspectRatio: '4 / 3',
   overflow: 'hidden',
   color: vars.color.textDim,
   fontFamily: 'monospace',
-  padding: vars.spacing.md,
+  padding: `0 ${vars.spacing.md}`,
 });
 
 export const thumbnailImage = style({
@@ -41,7 +42,7 @@ export const content = style({
   display: 'flex',
   flexDirection: 'column',
   gap: vars.spacing.sm,
-  padding: vars.spacing.md,
+  padding: `0 ${vars.spacing.md}`,
 });
 
 export const title = style({
@@ -68,6 +69,5 @@ export const summary = style({
 export const date = style({
   color: vars.color.textDim,
   fontSize: vars.fontSize.xs,
-  padding: vars.spacing.md,
   textAlign: 'end',
 });
