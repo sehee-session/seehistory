@@ -3,29 +3,29 @@ import { vars } from '~/shared/lib/theme.css';
 
 export const root = style({
   display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
   width: '100%',
   minHeight: '100vh',
-  padding: vars.spacing.lg,
   backgroundColor: vars.color.bg,
+  flexDirection: 'column',
 });
 
 export const content = style({
   width: '100%',
-  maxWidth: '560px',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: vars.spacing.md,
+  flex: 1,
+});
+
+export const message = style({
+  textAlign: 'center',
   display: 'flex',
   flexDirection: 'column',
   gap: vars.spacing.md,
 });
 
-export const message = style({
-  textAlign: 'center',
-});
-
 export const code = style({
   display: 'inline-block',
-  marginBottom: vars.spacing.md,
   padding: `${vars.spacing.xs} ${vars.spacing.md}`,
   color: vars.color.error,
   backgroundColor: `${vars.color.error}14`,
@@ -36,7 +36,6 @@ export const code = style({
 });
 
 export const heading = style({
-  margin: 0,
   color: vars.color.text,
   fontSize: 'clamp(2rem, 6vw, 2.75rem)',
   fontWeight: 800,
@@ -45,8 +44,6 @@ export const heading = style({
 });
 
 export const description = style({
-  maxWidth: '420px',
-  margin: `${vars.spacing.lg} auto 0`,
   color: vars.color.textDim,
   fontSize: vars.fontSize.md,
   lineHeight: 1.7,
@@ -58,7 +55,6 @@ export const actions = style({
   justifyContent: 'center',
   flexWrap: 'wrap',
   gap: vars.spacing.md,
-  marginTop: vars.spacing.xl,
 });
 
 export const homeButton = style({
@@ -115,11 +111,9 @@ export const footer = style({
   display: 'flex',
   justifyContent: 'space-between',
   gap: vars.spacing.sm,
-  marginTop: vars.spacing['2xl'],
-  paddingTop: vars.spacing.md,
+  padding: vars.spacing.md,
   borderTop: `1px solid ${vars.color.border}`,
   color: vars.color.textDim,
-  fontSize: '10px',
+  fontSize: vars.fontSize.xs,
   fontFamily: 'monospace',
-  letterSpacing: '0.04em',
 });

@@ -61,7 +61,6 @@ export const body = style({
 });
 
 export const command = style({
-  margin: 0,
   whiteSpace: 'pre-wrap',
 });
 
@@ -70,7 +69,6 @@ export const prompt = style({
 });
 
 export const output = style({
-  margin: 0,
   color: vars.color.terminal.red,
   whiteSpace: 'pre-wrap',
 });
@@ -79,7 +77,6 @@ export const trailingPrompt = style({
   display: 'flex',
   alignItems: 'center',
   gap: vars.spacing.xs,
-  margin: 0,
 });
 
 const blink = keyframes({
@@ -104,7 +101,6 @@ export const cursor = style({
 });
 
 export const line = style({
-  margin: 0,
   minHeight: '1.6em',
   whiteSpace: 'pre-wrap',
 });

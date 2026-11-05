@@ -17,7 +17,6 @@ export const featureList = style({
   display: 'flex',
   flexDirection: 'column',
   gap: vars.spacing.md,
-  margin: 0,
   padding: vars.spacing.lg,
   listStyle: 'none',
 });
