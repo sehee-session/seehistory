@@ -28,7 +28,6 @@ export const code = style({
   display: 'inline-block',
   padding: `${vars.spacing.xs} ${vars.spacing.md}`,
   color: vars.color.error,
-  backgroundColor: `${vars.color.error}14`,
   borderRadius: vars.radius.full,
   fontSize: vars.fontSize.xs,
   fontWeight: 700,
@@ -70,16 +69,6 @@ export const homeButton = style({
   fontWeight: 600,
   textDecoration: 'none',
   transition: 'opacity 150ms ease, transform 150ms ease',
-
-  ':hover': {
-    opacity: 0.9,
-    transform: 'translateY(-2px)',
-  },
-
-  ':focus-visible': {
-    outline: `2px solid ${vars.color.accent}`,
-    outlineOffset: '3px',
-  },
 });
 
 export const storiesButton = style({
@@ -95,16 +84,6 @@ export const storiesButton = style({
   fontWeight: 600,
   textDecoration: 'none',
   transition: 'border-color 150ms ease, transform 150ms ease',
-
-  ':hover': {
-    borderColor: vars.color.accent,
-    transform: 'translateY(-2px)',
-  },
-
-  ':focus-visible': {
-    outline: `2px solid ${vars.color.accent}`,
-    outlineOffset: '3px',
-  },
 });
 
 export const footer = style({

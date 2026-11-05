@@ -64,7 +64,7 @@ const Page = () => {
         </Tabs.List>
         <Tabs.Panel className={styles.panel} value={TAB.TRENDING}>
           {stories.map((story) => (
-            <article key={story.id}>
+            <article key={story.id} className={styles.panelItem}>
               <UserAuthor {...story.author} />
               <StoryCard {...story} />
             </article>
@@ -72,7 +72,7 @@ const Page = () => {
         </Tabs.Panel>
         <Tabs.Panel className={styles.panel} value={TAB.LATEST}>
           {stories.map((story) => (
-            <article key={story.id}>
+            <article key={story.id} className={styles.panelItem}>
               <UserAuthor {...story.author} />
               <StoryCard {...story} />
             </article>

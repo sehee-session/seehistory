@@ -8,12 +8,12 @@ export const author = style({
   width: '100%',
   color: vars.color.text,
   textDecoration: 'none',
-  padding: `${vars.spacing.md} 0`,
+  padding: vars.spacing.md,
 });
 
 export const avatar = style({
-  width: vars.size.sm,
-  height: vars.size.sm,
+  width: vars.size.xl,
+  height: vars.size.xl,
   borderRadius: vars.radius.full,
   objectFit: 'cover',
 });
@@ -22,8 +22,8 @@ export const avatarFallback = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  width: vars.size.sm,
-  height: vars.size.sm,
+  width: vars.size.xl,
+  height: vars.size.xl,
   borderRadius: vars.radius.full,
   backgroundColor: vars.color.surface,
   color: vars.color.text,

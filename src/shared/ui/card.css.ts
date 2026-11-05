@@ -11,8 +11,4 @@ export const card = style({
   border: `1px solid ${vars.color.border}`,
   borderRadius: vars.radius.lg,
   transition: 'border-color 150ms ease',
-
-  ':hover': {
-    borderColor: vars.color.accent,
-  },
 });

@@ -20,14 +20,11 @@ export const StoryCard = ({
     </div>
 
     <div className={styles.content}>
-      <h2 className={styles.title}>{title}</h2>
-      <p className={styles.summary}>{summary}</p>
-    </div>
-
-    <div className={styles.footer}>
       <time className={styles.date} dateTime={createdAt}>
         {formatDate(createdAt)}
       </time>
+      <h2 className={styles.title}>{title}</h2>
+      <p className={styles.summary}>{summary}</p>
     </div>
   </Link>
 );

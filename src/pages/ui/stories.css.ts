@@ -55,6 +55,15 @@ export const panel = style({
   paddingTop: vars.spacing.lg,
   display: 'grid',
   flexDirection: 'column',
-  gap: vars.spacing.lg,
+  gap: vars.spacing.sm,
   gridTemplateColumns: 'repeat(1, 1fr)',
+});
+
+export const panelItem = style({
+  selectors: {
+    [`${panel} & + &`]: {
+      borderTop: `1px solid ${vars.color.border}`,
+      paddingTop: vars.spacing.sm,
+    },
+  },
 });

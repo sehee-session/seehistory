@@ -2,12 +2,12 @@ import { style } from '@vanilla-extract/css';
 import { vars } from '~/shared/lib';
 
 export const card = style({
-  display: 'block',
+  display: 'flex',
+  flexDirection: 'column',
   width: '100%',
   overflow: 'hidden',
   color: 'inherit',
   textDecoration: 'none',
-  backgroundColor: vars.color.surface,
   transition: 'transform 150ms ease',
 
   selectors: {
@@ -25,9 +25,9 @@ export const thumbnail = style({
   width: '100%',
   aspectRatio: '16 / 9',
   overflow: 'hidden',
-  backgroundColor: vars.color.bg,
   color: vars.color.textDim,
   fontFamily: 'monospace',
+  padding: vars.spacing.md,
 });
 
 export const thumbnailImage = style({
@@ -65,16 +65,9 @@ export const summary = style({
   WebkitBoxOrient: 'vertical',
 });
 
-export const footer = style({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  gap: vars.spacing.sm,
-  padding: vars.spacing.md,
-  borderTop: `1px solid ${vars.color.border}`,
-});
-
 export const date = style({
   color: vars.color.textDim,
   fontSize: vars.fontSize.xs,
+  padding: vars.spacing.md,
+  textAlign: 'end',
 });
