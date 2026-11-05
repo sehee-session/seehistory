@@ -4,9 +4,7 @@ import {
   globalStyle,
 } from '@vanilla-extract/css';
 import { color } from './color';
-import { fontSize } from './font-size';
-import { radius } from './radius';
-import { spacing } from './spacing';
+import { fontSize, fontWeight, radius, size, spacing } from './size';
 
 export const vars = createThemeContract({
   color: {
@@ -33,13 +31,22 @@ export const vars = createThemeContract({
       green: null,
     },
   },
+  size: { xs: null, sm: null, md: null, lg: null, xl: null, '2xl': null },
   spacing: { xs: null, sm: null, md: null, lg: null, xl: null, '2xl': null },
   radius: { sm: null, md: null, lg: null, full: null },
   fontSize: { xs: null, sm: null, md: null, lg: null, xl: null, '2xl': null },
+  fontWeight: { regular: null, medium: null, semibold: null, bold: null },
 });
 
 // Light Theme (Default)
-createGlobalTheme(':root', vars, { color, spacing, radius, fontSize });
+createGlobalTheme(':root', vars, {
+  color,
+  radius,
+  size,
+  spacing,
+  fontSize,
+  fontWeight,
+});
 
 // Dark Theme (System Preference)
 globalStyle(':root', {

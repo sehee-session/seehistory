@@ -1,8 +1,6 @@
 import { useTyping } from '../hooks/use-typing';
 import * as styles from './terminal.css';
 
-type TerminalVariant = 'default' | 'error' | 'success';
-
 type TerminalLine = {
   text: string;
   type?: 'command' | 'output' | 'error' | 'success';
@@ -12,20 +10,15 @@ type TerminalLine = {
 type TerminalProps = {
   lines: TerminalLine[];
   title?: string;
-  variant?: TerminalVariant;
   cursor?: boolean;
 };
 
 export const Terminal = ({
   lines,
   title = 'terminal',
-  variant = 'default',
   cursor = true,
 }: TerminalProps) => (
-  <section
-    className={`${styles.root} ${styles.variants[variant]}`}
-    aria-label={title}
-  >
+  <section className={styles.root} aria-label={title}>
     <header className={styles.header}>
       <div className={styles.dots} aria-hidden="true">
         <span className={`${styles.dot} ${styles.red}`} />

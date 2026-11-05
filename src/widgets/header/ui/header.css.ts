@@ -11,6 +11,6 @@ export const header = style({
 
 export const logo = style({
   fontSize: vars.fontSize.xl,
-  fontWeight: 700,
+  fontWeight: vars.fontWeight.bold,
   letterSpacing: '-0.04em',
 });

@@ -11,7 +11,6 @@ const Page = () => {
     <main className={styles.root}>
       <div className={styles.content}>
         <Terminal
-          variant="error"
           lines={[
             {
               text: `find url ${location.pathname}${location.search}${location.hash}`,

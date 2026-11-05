@@ -21,7 +21,7 @@ export const tab = style({
   padding: `${vars.spacing.md} ${vars.spacing.xs}`,
   color: vars.color.textDim,
   fontSize: vars.fontSize.md,
-  fontWeight: 600,
+  fontWeight: vars.fontWeight.semibold,
   cursor: 'pointer',
   transition: 'color 150ms ease',
   display: 'flex',

@@ -23,6 +23,7 @@ export const featureList = style({
 });
 
 export const featureCard = style({
+  display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
   gap: vars.spacing.md,

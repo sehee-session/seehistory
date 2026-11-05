@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import { vars } from '~/shared/lib/theme.css';
+import { vars } from '~/shared/lib';
 
 export const card = style({
   display: 'block',
@@ -8,12 +8,7 @@ export const card = style({
   color: 'inherit',
   textDecoration: 'none',
   backgroundColor: vars.color.surface,
-  transition: 'border-color 150ms ease, transform 150ms ease',
-
-  ':hover': {
-    borderColor: vars.color.accent,
-    transform: 'translateY(-2px)',
-  },
+  transition: 'transform 150ms ease',
 
   selectors: {
     '&:focus-visible': {
@@ -54,7 +49,7 @@ export const title = style({
   overflow: 'hidden',
   color: vars.color.text,
   fontSize: vars.fontSize.lg,
-  fontWeight: 700,
+  fontWeight: vars.fontWeight.bold,
   lineHeight: 1.4,
   WebkitLineClamp: 1,
   WebkitBoxOrient: 'vertical',

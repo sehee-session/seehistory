@@ -14,7 +14,7 @@ export const header = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  height: '40px',
+  height: vars.size.md,
   borderBottom: `1px solid ${vars.color.terminal.border}`,
 });
 
@@ -26,9 +26,9 @@ export const dots = style({
 });
 
 export const dot = style({
-  width: '8px',
-  height: '8px',
-  borderRadius: '50%',
+  width: vars.size.xs,
+  height: vars.size.xs,
+  borderRadius: vars.radius.full,
 });
 
 export const red = style({
@@ -90,8 +90,8 @@ const blink = keyframes({
 
 export const cursor = style({
   display: 'inline-block',
-  width: '7px',
-  height: '16px',
+  width: '0.4375rem',
+  height: vars.spacing.md,
   backgroundColor: vars.color.terminal.text,
   animation: `${blink} 1s step-end infinite`,
   verticalAlign: 'middle',
@@ -102,16 +102,6 @@ export const cursor = style({
     },
   },
 });
-
-export const variants = {
-  default: style({}),
-  error: style({
-    borderColor: vars.color.error,
-  }),
-  success: style({
-    borderColor: vars.color.success,
-  }),
-};
 
 export const line = style({
   margin: 0,

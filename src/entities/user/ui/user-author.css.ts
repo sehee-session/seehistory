@@ -12,8 +12,8 @@ export const author = style({
 });
 
 export const avatar = style({
-  width: '32px',
-  height: '32px',
+  width: vars.size.sm,
+  height: vars.size.sm,
   borderRadius: vars.radius.full,
   objectFit: 'cover',
 });
@@ -22,15 +22,15 @@ export const avatarFallback = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  width: '32px',
-  height: '32px',
+  width: vars.size.sm,
+  height: vars.size.sm,
   borderRadius: vars.radius.full,
   backgroundColor: vars.color.surface,
   color: vars.color.text,
-  fontWeight: 600,
+  fontWeight: vars.fontWeight.semibold,
 });
 
 export const name = style({
-  fontSize: '14px',
-  fontWeight: 500,
+  fontSize: vars.fontSize.sm,
+  fontWeight: vars.fontWeight.medium,
 });

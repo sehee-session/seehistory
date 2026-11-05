@@ -9,7 +9,7 @@ const base = style({
   padding: `${vars.spacing.sm} ${vars.spacing.lg}`,
   borderRadius: vars.radius.md,
   fontSize: vars.fontSize.sm,
-  fontWeight: 600,
+  fontWeight: vars.fontWeight.medium,
   lineHeight: 1.5,
   whiteSpace: 'nowrap',
   cursor: 'pointer',
