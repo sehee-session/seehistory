@@ -1,7 +1,7 @@
 import type { Story } from '~/entities/story';
 import type { User } from '~/entities/user';
 
-export type StoryWithAuthor = Story & {
+export type StoryWithAuthor = Omit<Story, 'content'> & {
   author: Pick<User, 'name' | 'nickname' | 'avatarUrl'>;
 };
 

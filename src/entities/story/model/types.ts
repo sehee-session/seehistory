@@ -4,4 +4,5 @@ export type Story = {
   title: string;
   summary: string;
   createdAt: string;
+  content: string;
 };

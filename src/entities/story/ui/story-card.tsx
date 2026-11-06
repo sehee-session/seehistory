@@ -9,7 +9,7 @@ export const StoryCard = ({
   title,
   summary,
   createdAt,
-}: Story) => (
+}: Omit<Story, 'content'>) => (
   <Link to={`/stories/${id}`} className={styles.card}>
     <div className={styles.thumbnail}>
       {thumbnailUrl ? (
