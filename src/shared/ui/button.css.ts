@@ -52,4 +52,20 @@ export const buttonVariants = styleVariants({
       },
     },
   ],
+
+  icon: [
+    base,
+    {
+      padding: 0,
+      width: `calc(${vars.fontSize.sm} * 1.5 + ${vars.spacing.sm} * 2 + 2px)`,
+      height: `calc(${vars.fontSize.sm} * 1.5 + ${vars.spacing.sm} * 2 + 2px)`,
+      color: vars.color.text,
+      border: 'none',
+      backgroundColor: 'transparent',
+
+      ':hover': {
+        backgroundColor: vars.color.surface,
+      },
+    },
+  ],
 });

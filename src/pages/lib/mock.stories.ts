@@ -8,7 +8,7 @@ export type StoryWithAuthor = Story & {
 export const stories: StoryWithAuthor[] = [
   {
     id: '1',
-    thumbnailUrl: null,
+    thumbnailUrl: 'https://picsum.photos/seed/react2/600/400',
     title: 'Understanding React Server Components',
     summary:
       'A deep dive into React Server Components and how they change the way we build applications.',

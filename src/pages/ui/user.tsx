@@ -7,7 +7,7 @@ import type { Route } from './+types/user';
 import * as styles from './user.css';
 
 export const meta = ({ params }: Route.MetaArgs) => [
-  { title: `Users | ${params.nickname}'s history` },
+  { title: `${params.nickname}'s history` },
   {
     name: 'description',
     content: `Explore ${params.nickname}'s developer stories and experiences.`,
@@ -19,7 +19,7 @@ const Page = ({ params }: Route.ComponentProps) => {
 
   return (
     <main>
-      <Header text={`users/${nickname}`} />
+      <Header text={`${nickname}`} />
       <UserInfo {...user} />
       <div className={styles.list}>
         {stories.map((story) => (

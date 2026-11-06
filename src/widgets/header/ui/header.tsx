@@ -1,3 +1,4 @@
+import { PencilLineIcon } from 'lucide-react';
 import { Link } from 'react-router';
 import { Button } from '~/shared/ui';
 import * as styles from './header.css';
@@ -13,7 +14,9 @@ export const Header = ({ text }: HeaderProps) => (
       {text}
     </li>
     <li>
-      <Button variant="secondary">Sign In</Button>
+      <Button variant="icon">
+        <PencilLineIcon />
+      </Button>
     </li>
   </ul>
 );
