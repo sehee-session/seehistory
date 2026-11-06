@@ -4,7 +4,8 @@ export const size = {
   md: '1rem',
   lg: '1.5rem',
   xl: '2rem',
-  '2xl': '2.5rem',
+  '2xl': '3rem',
+  '3xl': '5rem',
 };
 
 export const spacing = {

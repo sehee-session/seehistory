@@ -1,2 +1,4 @@
 export * from './model/types';
-export * from './ui/use-author';
+
+export * from './ui/user-author';
+export * from './ui/user-info';
