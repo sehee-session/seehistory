@@ -14,7 +14,7 @@ export const header = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  height: vars.size.md,
+  height: vars.size.xl,
   borderBottom: `1px solid ${vars.color.terminal.border}`,
 });
 
