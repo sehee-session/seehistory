@@ -8,7 +8,7 @@ import { fontSize, fontWeight, radius, size, spacing } from './size';
 
 export const vars = createThemeContract({
   color: {
-    // base
+    white: null,
     bg: null,
     surface: null,
     border: null,
@@ -61,6 +61,7 @@ globalStyle(':root', {
   '@media': {
     '(prefers-color-scheme: dark)': {
       vars: {
+        [vars.color.white]: '#050505',
         [vars.color.bg]: '#0d1117',
         [vars.color.surface]: '#161b22',
         [vars.color.border]: '#21262d',

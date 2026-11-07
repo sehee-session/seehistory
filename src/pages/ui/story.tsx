@@ -1,6 +1,8 @@
+import { UserInfo } from '~/entities/user';
 import { MarkdownViewer } from '~/shared/ui/md-viewer';
 import { Header } from '~/widgets/header';
 import { story } from '../lib/mock.story';
+import { user } from '../lib/mock.user';
 
 export const meta = () => [
   { title: '' },
@@ -14,6 +16,7 @@ const Page = () => {
   return (
     <main>
       <Header text="stories" />
+      <UserInfo {...user} />
       <MarkdownViewer {...story} />
     </main>
   );

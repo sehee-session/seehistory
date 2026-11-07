@@ -6,7 +6,7 @@ export type StoryWithAuthor = Story & {
 };
 
 const content = `
-# Markdown Viewer 테스트 게시글
+# 테스트 게시글
 
 Markdown Viewer와 Editor의 렌더링을 테스트하기 위한 예시 문서입니다.
 

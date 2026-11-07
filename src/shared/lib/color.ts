@@ -1,4 +1,5 @@
 export const color = {
+  white: '#fafafa',
   bg: '#f6f7f8',
   surface: '#eceef0',
   border: '#d5d9dd',
