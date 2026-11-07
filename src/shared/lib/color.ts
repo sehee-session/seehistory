@@ -5,7 +5,7 @@ export const color = {
   border: '#d5d9dd',
   text: '#1c2024',
   textDim: '#6b7280',
-  accent: '#8B5CF6',
+  accent: '#0D9488',
   error: '#DC2626',
   success: '#16A34A',
 

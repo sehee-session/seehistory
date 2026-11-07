@@ -107,7 +107,7 @@ globalStyle(`${root} blockquote`, {
   borderTop: 1,
   borderBottom: 1,
   borderColor: vars.color.border,
-  borderLeftColor: vars.color.success,
+  borderLeftColor: vars.color.accent,
   borderLeftWidth: vars.size.xs,
   borderStyle: 'solid',
   marginTop: vars.spacing.md,
