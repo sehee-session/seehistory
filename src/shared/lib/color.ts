@@ -1,11 +1,12 @@
 export const color = {
+  accent: '#0D9488',
+
   white: '#fafafa',
   bg: '#f6f7f8',
   surface: '#eceef0',
   border: '#d5d9dd',
   text: '#1c2024',
   textDim: '#6b7280',
-  accent: '#0D9488',
   error: '#DC2626',
   success: '#16A34A',
 

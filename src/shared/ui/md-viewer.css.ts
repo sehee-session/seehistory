@@ -12,21 +12,24 @@ globalStyle(
   ${root} h3,
   ${root} h4,
   ${root} h5,
-  ${root} h6,
+  ${root} h6,`,
+  {
+    marginTop: vars.spacing.lg,
+    marginBottom: vars.spacing.lg,
+  },
+);
+globalStyle(
+  `${root} li,
   ${root} p,
   ${root} img,
   ${root} table,
   ${root} ul,
   ${root} ol`,
   {
-    marginTop: vars.spacing.lg,
-    marginBottom: vars.spacing.lg,
+    marginTop: vars.spacing.md,
+    marginBottom: vars.spacing.md,
   },
 );
-globalStyle(`${root} li`, {
-  marginTop: vars.spacing.md,
-  marginBottom: vars.spacing.md,
-});
 
 // Heading
 globalStyle(`${root} h1`, { fontSize: '4rem' });
@@ -114,8 +117,7 @@ globalStyle(`${root} blockquote`, {
   marginBottom: vars.spacing.md,
 });
 globalStyle(`${root} blockquote p`, {
-  padding: 0,
-  margin: 0,
+  margin: vars.spacing.sm,
 });
 
 // Code
@@ -127,9 +129,11 @@ globalStyle(`${root} pre`, {
 });
 globalStyle(`${root} pre > code`, {});
 globalStyle(`${root} :not(pre) > code`, {
-  border: `1px solid ${vars.color.border}`,
-  padding: vars.spacing.sm,
-  margin: vars.spacing.sm,
+  backgroundColor: vars.color.terminal.bg,
+  color: vars.color.terminal.text,
+  padding: vars.spacing.xs,
+  marginTop: `-${vars.spacing.xs}`,
+  marginBottom: `-${vars.spacing.xs}`,
   borderRadius: vars.radius.sm,
   fontSize: vars.fontSize.xs,
 });
@@ -235,4 +239,26 @@ globalStyle(`${root} section[data-footnotes] ol > li::before`, {
   justifyContent: 'center',
   boxSizing: 'border-box',
   color: vars.color.accent,
+});
+
+export const codeBlock = style({
+  position: 'relative',
+});
+
+export const copyButton = style({
+  position: 'absolute',
+  top: vars.spacing.sm,
+  right: vars.spacing.sm,
+  width: vars.size.xl,
+  height: vars.size.xl,
+  padding: 0,
+  boxSizing: 'border-box',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  cursor: 'pointer',
+});
+
+globalStyle(`${codeBlock} pre`, {
+  margin: 0,
 });
