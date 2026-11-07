@@ -66,16 +66,17 @@ globalStyle(`${root} ul, ${root} ol`, {
   fontWeight: vars.fontWeight.medium,
 });
 
-globalStyle(`${root} ul:not(.contains-task-list)`, {
-  listStyleType: 'disc',
-});
+const listStyles = ['disc', 'circle', 'square'] as const;
+listStyles.forEach((listStyleType, index) => {
+  const selector = `${root} ${'ul '.repeat(index)}ul:not(.contains-task-list)`;
 
-globalStyle(`${root} ul ul:not(.contains-task-list)`, {
-  listStyleType: 'circle',
-});
+  globalStyle(selector, {
+    listStyleType,
+  });
 
-globalStyle(`${root} ul ul ul:not(.contains-task-list)`, {
-  listStyleType: 'square',
+  globalStyle(`${selector} > li::marker`, {
+    color: vars.color.accent,
+  });
 });
 
 globalStyle(`${root} ol`, {
