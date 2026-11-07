@@ -12,7 +12,7 @@ globalStyle(
   ${root} h3,
   ${root} h4,
   ${root} h5,
-  ${root} h6,`,
+  ${root} h6`,
   {
     marginTop: vars.spacing.lg,
     marginBottom: vars.spacing.lg,
