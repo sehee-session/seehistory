@@ -32,12 +32,29 @@ globalStyle(
 );
 
 // Heading
-globalStyle(`${root} h1`, { fontSize: vars.size['2xl'] });
-globalStyle(`${root} h2`, { fontSize: vars.size.xl });
-globalStyle(`${root} h3`, { fontSize: vars.size.lg });
-globalStyle(`${root} h4`, { fontSize: vars.size.md });
-globalStyle(`${root} h5`, { fontSize: vars.size.md });
-globalStyle(`${root} h6`, { fontSize: vars.size.md });
+globalStyle(`${root} h1`, {
+  fontSize: vars.fontSize['4xl'],
+});
+
+globalStyle('${root} h2', {
+  fontSize: vars.fontSize['3xl'],
+});
+
+globalStyle('${root} h3', {
+  fontSize: vars.fontSize['2xl'],
+});
+
+globalStyle('${root} h4', {
+  fontSize: vars.fontSize.xl,
+});
+
+globalStyle('${root} h5', {
+  fontSize: vars.fontSize.lg,
+});
+
+globalStyle('${root} h6', {
+  fontSize: vars.fontSize.md,
+});
 
 // Paragraph
 globalStyle(`${root} p`, {

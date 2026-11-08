@@ -42,7 +42,16 @@ export const vars = createThemeContract({
   },
   spacing: { xs: null, sm: null, md: null, lg: null, xl: null, '2xl': null },
   radius: { sm: null, md: null, lg: null, full: null },
-  fontSize: { xs: null, sm: null, md: null, lg: null, xl: null, '2xl': null },
+  fontSize: {
+    xs: null,
+    sm: null,
+    md: null,
+    lg: null,
+    xl: null,
+    '2xl': null,
+    '3xl': null,
+    '4xl': null,
+  },
   fontWeight: { regular: null, medium: null, semibold: null, bold: null },
   shadow: { sm: null, md: null, lg: null },
 });
