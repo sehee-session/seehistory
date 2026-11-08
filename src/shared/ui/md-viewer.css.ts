@@ -32,15 +32,17 @@ globalStyle(
 );
 
 // Heading
-globalStyle(`${root} h1`, { fontSize: '4rem' });
-globalStyle(`${root} h2`, { fontSize: '3rem' });
-globalStyle(`${root} h3`, { fontSize: '2.5rem' });
-globalStyle(`${root} h4`, { fontSize: '2rem' });
-globalStyle(`${root} h5`, { fontSize: '1.5rem' });
-globalStyle(`${root} h6`, { fontSize: '1rem' });
+globalStyle(`${root} h1`, { fontSize: vars.size['2xl'] });
+globalStyle(`${root} h2`, { fontSize: vars.size.xl });
+globalStyle(`${root} h3`, { fontSize: vars.size.lg });
+globalStyle(`${root} h4`, { fontSize: vars.size.md });
+globalStyle(`${root} h5`, { fontSize: vars.size.md });
+globalStyle(`${root} h6`, { fontSize: vars.size.md });
 
 // Paragraph
-globalStyle(`${root} p`, {});
+globalStyle(`${root} p`, {
+  fontSize: vars.fontSize.md,
+});
 
 // Text Formatting
 globalStyle(`${root} strong`, {
