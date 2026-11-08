@@ -3,7 +3,7 @@ import {
   createThemeContract,
   globalStyle,
 } from '@vanilla-extract/css';
-import { color } from './color';
+import { color, shadow } from './color';
 import { fontSize, fontWeight, radius, size, spacing } from './size';
 
 export const vars = createThemeContract({
@@ -44,6 +44,7 @@ export const vars = createThemeContract({
   radius: { sm: null, md: null, lg: null, full: null },
   fontSize: { xs: null, sm: null, md: null, lg: null, xl: null, '2xl': null },
   fontWeight: { regular: null, medium: null, semibold: null, bold: null },
+  shadow: { sm: null, md: null, lg: null },
 });
 
 // Light Theme (Default)
@@ -54,6 +55,7 @@ createGlobalTheme(':root', vars, {
   spacing,
   fontSize,
   fontWeight,
+  shadow,
 });
 
 // Dark Theme (System Preference)

@@ -3,6 +3,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import remarkGfm from 'remark-gfm';
+import { toast } from '../lib/toast';
 import { Button } from './button';
 import * as styles from './md-viewer.css';
 
@@ -53,8 +54,10 @@ const MarkdownCodeBlock = ({
     try {
       await navigator.clipboard.writeText(code);
       setCopied(true);
+      toast.success('성공적으로 복사되었습니다.');
     } catch {
       setCopied(false);
+      toast.error('복사에 실패했습니다.');
     }
   };
 

@@ -15,7 +15,7 @@ export const Header = ({ text }: HeaderProps) => (
     </li>
     <li>
       <Button variant="icon">
-        <PencilLineIcon />
+        <PencilLineIcon size={16} />
       </Button>
     </li>
   </ul>
