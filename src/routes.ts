@@ -10,6 +10,9 @@ export default [
   // user
   route('users/:nickname', 'pages/ui/user.tsx'),
 
+  // theme
+  route('color-mode', 'api/action/color-mode.ts'),
+
   //
   route('*', 'pages/ui/not-found.tsx'),
 ] satisfies RouteConfig;

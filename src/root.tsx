@@ -5,8 +5,12 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useRouteLoaderData,
 } from 'react-router';
 import type { Route } from './+types/root';
+
+import { getColorMode } from './shared/lib/color-mode.server';
+
 import './shared/lib/global.css';
 import { ToastProvider } from './shared/ui/toast-ui';
 
@@ -23,9 +27,17 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+export const loader = async ({ request }: Route.LoaderArgs) => {
+  return {
+    colorMode: await getColorMode(request),
+  };
+};
+
 export function Layout({ children }: { children: React.ReactNode }) {
+  const rootData = useRouteLoaderData<typeof loader>('root');
+
   return (
-    <html lang="en">
+    <html lang="ko" data-mode={rootData?.colorMode ?? 'white'}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
