@@ -1,12 +1,14 @@
 import React from 'react';
-import type { MarkdownHeading } from '../lib/extract-headings';
+import { extractHeadings } from '../lib/extract-headings';
 import * as styles from './md-toc.css';
 
 type MarkdownTocProps = {
-  headings: MarkdownHeading[];
+  content: string;
 };
 
-export const MarkdownToc = ({ headings }: MarkdownTocProps) => {
+export const MarkdownToc = ({ content }: MarkdownTocProps) => {
+  const headings = React.useMemo(() => extractHeadings(content), [content]);
+
   const [activeId, setActiveId] = React.useState(headings[0]?.id ?? '');
 
   React.useEffect(() => {

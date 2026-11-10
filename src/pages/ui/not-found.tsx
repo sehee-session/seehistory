@@ -1,5 +1,5 @@
 import { data, Link, useLocation } from 'react-router';
-import { Terminal } from '~/shared/ui/terminal';
+import { Terminal } from '~/shared/ui';
 import { Header } from '~/widgets/header';
 import * as styles from './not-found.css';
 

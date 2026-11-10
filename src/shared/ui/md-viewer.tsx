@@ -7,7 +7,6 @@ import { extractHeadings } from '../lib/extract-headings';
 import { remarkHeadingId } from '../lib/remark-heading-id';
 import { toast } from '../lib/toast';
 import { Button } from './button';
-import { MarkdownToc } from './md-toc';
 import * as styles from './md-viewer.css';
 
 type MarkdownViewerProps = {
@@ -96,20 +95,16 @@ export const MarkdownViewer = ({ content }: MarkdownViewerProps) => {
   );
 
   return (
-    <>
-      <article className={styles.root}>
-        <ReactMarkdown
-          remarkPlugins={remarkPlugins}
-          rehypePlugins={[rehypeHighlight]}
-          components={{
-            pre: MarkdownCodeBlock,
-          }}
-        >
-          {content}
-        </ReactMarkdown>
-      </article>
-
-      <MarkdownToc headings={headings} />
-    </>
+    <article className={styles.root}>
+      <ReactMarkdown
+        remarkPlugins={remarkPlugins}
+        rehypePlugins={[rehypeHighlight]}
+        components={{
+          pre: MarkdownCodeBlock,
+        }}
+      >
+        {content}
+      </ReactMarkdown>
+    </article>
   );
 };

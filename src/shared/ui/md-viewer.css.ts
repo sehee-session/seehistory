@@ -1,5 +1,5 @@
 import { globalStyle, style } from '@vanilla-extract/css';
-import { vars } from '../lib';
+import { vars } from '../styles';
 
 export const root = style({
   color: vars.color.text,

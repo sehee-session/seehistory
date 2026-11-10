@@ -4,7 +4,7 @@ import {
   Share2Icon,
   TrendingUpIcon,
 } from 'lucide-react';
-import { Card } from '~/shared/ui/card';
+import { Card } from '~/shared/ui';
 import * as styles from './intro.css';
 
 const features = [

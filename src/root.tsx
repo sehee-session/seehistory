@@ -8,11 +8,9 @@ import {
   useRouteLoaderData,
 } from 'react-router';
 import type { Route } from './+types/root';
-
 import { getColorMode } from './shared/lib/color-mode.server';
-
 import './shared/lib/global.css';
-import { ToastProvider } from './shared/ui/toast-ui';
+import { ToastProvider } from './shared/ui';
 
 export const links: Route.LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

@@ -1,5 +1,5 @@
 import { globalStyle, keyframes, style } from '@vanilla-extract/css';
-import { vars } from '../lib';
+import { vars } from '../styles';
 
 const fadeIn = keyframes({
   from: {

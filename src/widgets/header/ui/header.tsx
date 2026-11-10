@@ -16,7 +16,7 @@ export const Header = ({ text }: HeaderProps) => {
       </li>
       <li>
         <ColorModeToggle />
-        <Button variant="icon">
+        <Button variant="icon" to={'/stories/new'}>
           <PencilLineIcon size={16} />
         </Button>
       </li>

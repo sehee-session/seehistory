@@ -5,7 +5,9 @@ export default [
 
   // story
   // route('stories', 'pages/ui/stories.tsx'),
+  route('stories/new', 'pages/ui/create-story.tsx'),
   route('stories/:id', 'pages/ui/story.tsx'),
+  // route('stories/:id/edit', 'pages/ui/user.tsx'),
 
   // user
   route('users/:nickname', 'pages/ui/user.tsx'),
