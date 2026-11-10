@@ -1,3 +1,4 @@
+import { PATHS } from '~/shared/constants';
 import { Button, Terminal } from '~/shared/ui';
 import { Header } from '~/widgets/header';
 import { Intro } from '~/widgets/intro';
@@ -32,7 +33,7 @@ const Page = () => {
         />
         <div className={styles.actions}>
           <Button variant="primary">Get started →</Button>
-          <Button variant="secondary" to="/stories">
+          <Button variant="secondary" to={PATHS.STORY.BASE}>
             Explore stories →
           </Button>
         </div>

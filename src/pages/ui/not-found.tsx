@@ -1,4 +1,5 @@
 import { data, Link, useLocation } from 'react-router';
+import { PATHS } from '~/shared/constants';
 import { Terminal } from '~/shared/ui';
 import { Header } from '~/widgets/header';
 import * as styles from './not-found.css';
@@ -37,7 +38,7 @@ const Page = () => {
               ~/ Back to Home
             </Link>
 
-            <Link to="/stories" className={styles.storiesButton}>
+            <Link to={PATHS.STORY.BASE} className={styles.storiesButton}>
               Explore Stories <span>→</span>
             </Link>
           </div>

@@ -29,6 +29,7 @@ export const Button = ({
       <BaseButton
         {...props}
         render={<Link to={to} />}
+        nativeButton={false}
         className={mergedClassName}
       />
     );
