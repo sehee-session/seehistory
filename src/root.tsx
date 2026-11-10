@@ -8,8 +8,8 @@ import {
   useRouteLoaderData,
 } from 'react-router';
 import type { Route } from './+types/root';
-import { getColorMode } from './shared/lib/color-mode.server';
-import './shared/lib/global.css';
+import { getColorMode } from './shared/actions';
+import './shared/styles';
 import { ToastProvider } from './shared/ui';
 
 export const links: Route.LinksFunction = () => [

@@ -1,4 +1,4 @@
-import { colorModeCookie } from '~/shared/lib/color-mode.server';
+import { colorModeCookie } from '~/shared/actions';
 import type { Route } from './+types/color-mode';
 
 export const action = async ({ request }: Route.ActionArgs) => {

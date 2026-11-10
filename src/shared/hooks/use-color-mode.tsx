@@ -1,6 +1,6 @@
 import React from 'react';
 import { useFetcher, useRouteLoaderData } from 'react-router';
-import type { ColorMode } from '../lib/color-mode.server';
+import type { ColorMode } from '../actions/color-mode.server';
 
 export const useColorMode = () => {
   const rootData = useRouteLoaderData<typeof import('~/root').loader>('root');
