@@ -3,8 +3,11 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import remarkGfm from 'remark-gfm';
+import { extractHeadings } from '../lib/extract-headings';
+import { remarkHeadingId } from '../lib/remark-heading-id';
 import { toast } from '../lib/toast';
 import { Button } from './button';
+import { MarkdownToc } from './md-toc';
 import * as styles from './md-viewer.css';
 
 type MarkdownViewerProps = {
@@ -79,16 +82,34 @@ const MarkdownCodeBlock = ({
   );
 };
 
-export const MarkdownViewer = ({ content }: MarkdownViewerProps) => (
-  <article className={styles.root}>
-    <ReactMarkdown
-      remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeHighlight]}
-      components={{
-        pre: MarkdownCodeBlock,
-      }}
-    >
-      {content}
-    </ReactMarkdown>
-  </article>
-);
+export const MarkdownViewer = ({ content }: MarkdownViewerProps) => {
+  const headings = React.useMemo(() => extractHeadings(content), [content]);
+
+  const headingPlugin = React.useMemo(
+    () => remarkHeadingId(headings),
+    [headings],
+  );
+
+  const remarkPlugins = React.useMemo(
+    () => [remarkGfm, headingPlugin],
+    [headingPlugin],
+  );
+
+  return (
+    <>
+      <article className={styles.root}>
+        <ReactMarkdown
+          remarkPlugins={remarkPlugins}
+          rehypePlugins={[rehypeHighlight]}
+          components={{
+            pre: MarkdownCodeBlock,
+          }}
+        >
+          {content}
+        </ReactMarkdown>
+      </article>
+
+      <MarkdownToc headings={headings} />
+    </>
+  );
+};
