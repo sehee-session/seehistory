@@ -72,13 +72,14 @@ globalStyle(':root:not([data-mode])', {
   '@media': {
     '(prefers-color-scheme: dark)': {
       vars: {
+        [vars.color.accent]: '#0D9488',
+
         [vars.color.white]: '#050505',
         [vars.color.bg]: '#0d1117',
         [vars.color.surface]: '#161b22',
         [vars.color.border]: '#21262d',
         [vars.color.text]: '#c9d1d9',
         [vars.color.textDim]: '#6e7681',
-        [vars.color.accent]: '#A78BFA',
         [vars.color.error]: '#DC2626',
         [vars.color.success]: '#16A34A',
 
@@ -98,13 +99,14 @@ globalStyle(':root:not([data-mode])', {
 // 사용자가 직접 dark를 선택한 경우
 globalStyle('[data-mode="dark"]', {
   vars: {
+    [vars.color.accent]: '#0D9488',
+
     [vars.color.white]: '#050505',
     [vars.color.bg]: '#0d1117',
     [vars.color.surface]: '#161b22',
     [vars.color.border]: '#21262d',
     [vars.color.text]: '#c9d1d9',
     [vars.color.textDim]: '#6e7681',
-    [vars.color.accent]: '#A78BFA',
     [vars.color.error]: '#DC2626',
     [vars.color.success]: '#16A34A',
 

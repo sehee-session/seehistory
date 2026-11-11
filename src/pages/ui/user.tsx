@@ -18,7 +18,7 @@ const Page = ({ params }: Route.ComponentProps) => {
   const { nickname } = params;
 
   return (
-    <main>
+    <>
       <Header text={`${nickname}`} />
       <UserInfo {...user} />
       <div className={styles.list}>
@@ -28,7 +28,7 @@ const Page = ({ params }: Route.ComponentProps) => {
           </article>
         ))}
       </div>
-    </main>
+    </>
   );
 };
 

@@ -15,14 +15,14 @@ export const meta = () => [
 
 const Page = () => {
   return (
-    <main>
+    <>
       <Header text="stories" />
       <UserInfo {...user} />
       <h1>{story.title}</h1>
       <time dateTime={story.createdAt}>{formatDate(story.createdAt)}</time>
       <MarkdownViewer {...story} />
       <MarkdownToc {...story} />
-    </main>
+    </>
   );
 };
 

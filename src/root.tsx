@@ -44,7 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <ToastProvider />
-        <div className="root">{children}</div>
+        <main className="root">{children}</main>
         <ScrollRestoration />
         <Scripts />
       </body>

@@ -14,7 +14,7 @@ export const meta = () => [
 
 const Page = () => {
   return (
-    <main>
+    <>
       <Header text="" />
 
       <section className={styles.hero}>
@@ -39,7 +39,7 @@ const Page = () => {
         </div>
       </section>
       <Intro />
-    </main>
+    </>
   );
 };
 

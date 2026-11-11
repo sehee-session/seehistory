@@ -1,3 +1,4 @@
+import { StoryForm } from '~/entities/story';
 import { Header } from '~/widgets/header';
 
 export const meta = [
@@ -8,12 +9,11 @@ export const meta = [
   },
 ];
 
-const Page = () => {
-  return (
-    <main>
-      <Header text="compose" />
-    </main>
-  );
-};
+const Page = () => (
+  <>
+    <Header text="compose" />
+    <StoryForm />
+  </>
+);
 
 export default Page;
