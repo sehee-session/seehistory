@@ -2,6 +2,7 @@ export * from './button';
 export * from './card';
 export * from './color-mode';
 export * from './input';
+export * from './md-helper';
 export * from './md-toc';
 export * from './md-viewer';
 export * from './terminal';

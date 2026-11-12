@@ -6,6 +6,8 @@ export const container = style({
   padding: vars.spacing.sm,
 
   outline: 'none',
+  border: 'none',
+  borderBottom: `2px solid ${vars.color.border}`,
   background: 'transparent',
 
   color: vars.color.text,
@@ -14,9 +16,6 @@ export const container = style({
   lineHeight: 1.4,
   fontFamily: 'inherit',
   resize: 'none',
-  borderWidth: 2,
-
-  caretColor: vars.color.accent,
 
   selectors: {
     '&::placeholder': {
