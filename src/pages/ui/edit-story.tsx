@@ -35,8 +35,8 @@ const Page = () => {
       {preview ? (
         <>
           <h1>{form.state.values.title}</h1>
-          <time dateTime={new Date().toLocaleDateString()}>
-            {formatDate(new Date().toLocaleDateString())}
+          <time dateTime={new Date().toISOString()}>
+            {formatDate(new Date().toISOString())}
           </time>
           <MarkdownViewer content={form.state.values.content} />
           <MarkdownToc content={form.state.values.content} />
