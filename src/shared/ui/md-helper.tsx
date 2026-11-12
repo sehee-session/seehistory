@@ -46,11 +46,12 @@ export const MarkdownHelper = ({
         <select
           className={styles.headingSelect}
           aria-label="Heading"
-          defaultValue={MARKDOWN_STRATEGIES.paragraph.value}
+          value=" "
           onChange={(event) =>
             onApplyStrategy(event.target.value as MarkdownStrategyValue)
           }
         >
+          <option value=" ">Heading</option>
           {HEADING_SELECT.map((action) => (
             <option key={action.value} value={action.value}>
               {action.label}
