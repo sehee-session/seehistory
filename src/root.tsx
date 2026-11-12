@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   isRouteErrorResponse,
   Links,
@@ -53,7 +54,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <React.ViewTransition>
+      <Outlet />
+    </React.ViewTransition>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

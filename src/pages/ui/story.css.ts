@@ -6,6 +6,24 @@ export const root = style({
   padding: vars.spacing.md,
 });
 
+export const thumbnail = style({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '100%',
+  aspectRatio: '4 / 3',
+  overflow: 'hidden',
+  color: vars.color.textDim,
+  fontFamily: 'monospace',
+});
+
+export const thumbnailImage = style({
+  display: 'block',
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+});
+
 export const list = style({
   position: 'relative',
   display: 'flex',

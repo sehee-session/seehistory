@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router';
 import { PATHS } from '~/shared/constants';
 import { formatDate } from '../lib/format-date';
@@ -12,13 +13,15 @@ export const StoryCard = ({
   createdAt,
 }: Omit<Story, 'content'>) => (
   <Link to={PATHS.STORY.DETAIL(id)} className={styles.card}>
-    <div className={styles.thumbnail}>
-      {thumbnailUrl ? (
-        <img className={styles.thumbnailImage} src={thumbnailUrl} alt="" />
-      ) : (
-        <span>~/story</span>
-      )}
-    </div>
+    <React.ViewTransition name="story-thumbnail">
+      <div className={styles.thumbnail}>
+        {thumbnailUrl ? (
+          <img className={styles.thumbnailImage} src={thumbnailUrl} alt="" />
+        ) : (
+          <span>~/story</span>
+        )}
+      </div>
+    </React.ViewTransition>
 
     <div className={styles.content}>
       <time className={styles.date} dateTime={createdAt}>
