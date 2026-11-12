@@ -1,12 +1,9 @@
-import { useForm } from '@tanstack/react-form';
 import React from 'react';
 import { Input, MarkdownHelper, TextArea } from '~/shared/ui';
+import type { StoryFormApi } from '../lib/type';
 import * as styles from './story-form.css';
 
-export const StoryForm = () => {
-  const form = useForm({
-    defaultValues: { title: '', content: '' },
-  });
+export const StoryForm = ({ form }: { form: StoryFormApi }) => {
   const ref = React.useRef<HTMLTextAreaElement>(null);
 
   return (

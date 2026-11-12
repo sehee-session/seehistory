@@ -25,11 +25,11 @@ const Page = () => {
           </Button>,
         ]}
       />
-      <UserInfo {...user} />
       <h1>{story.title}</h1>
       <time dateTime={story.createdAt}>{formatDate(story.createdAt)}</time>
       <MarkdownViewer {...story} />
       <MarkdownToc {...story} />
+      <UserInfo {...user} />
     </>
   );
 };

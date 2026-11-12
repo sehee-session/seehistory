@@ -66,6 +66,7 @@ globalStyle('table', {
 // Global CSS
 globalStyle('html', {
   WebkitTextSizeAdjust: '100%',
+  scrollbarGutter: 'stable',
 });
 
 globalStyle('body', {
