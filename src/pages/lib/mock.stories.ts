@@ -8,7 +8,7 @@ export type StoryWithAuthor = Omit<Story, 'content'> & {
 export const stories: StoryWithAuthor[] = [
   {
     id: '1',
-    thumbnailUrl: 'https://picsum.photos/seed/react2/600/400',
+    thumbnailUrl: 'https://picsum.dev/600/400',
     title: 'Understanding React Server Components',
     summary:
       'A deep dive into React Server Components and how they change the way we build applications.',
@@ -22,7 +22,7 @@ export const stories: StoryWithAuthor[] = [
   },
   {
     id: '2',
-    thumbnailUrl: 'https://picsum.photos/seed/react2/600/400',
+    thumbnailUrl: 'https://picsum.dev/600/400',
     title: 'Mastering TypeScript Utility Types',
     summary:
       'Learn how to leverage advanced TypeScript utility types to write more robust and maintainable code.',
@@ -30,13 +30,13 @@ export const stories: StoryWithAuthor[] = [
     author: {
       id: '2',
       name: 'Jane Smith',
-      avatarUrl: 'https://picsum.photos/seed/avatar1/100/100',
+      avatarUrl: 'https://picsum.dev/100/100',
       nickname: 'Jane',
     },
   },
   {
     id: '3',
-    thumbnailUrl: 'https://picsum.photos/seed/react3/600/400',
+    thumbnailUrl: 'https://picsum.dev/600/400',
     title: 'Tailwind CSS v4: What is New?',
     summary:
       'Explore the latest performance improvements and configuration changes in Tailwind CSS v4.',
@@ -58,13 +58,13 @@ export const stories: StoryWithAuthor[] = [
     author: {
       id: '4',
       name: 'Emily Davis',
-      avatarUrl: 'https://picsum.photos/seed/avatar2/100/100',
+      avatarUrl: 'https://picsum.dev/100/100',
       nickname: 'Emily',
     },
   },
   {
     id: '5',
-    thumbnailUrl: 'https://picsum.photos/seed/react5/600/400',
+    thumbnailUrl: 'https://picsum.dev/600/400',
     title: 'State Management in 2026: Zustand vs Redux',
     summary:
       'Comparing modern state management solutions to find the best fit for your next large-scale project.',

@@ -218,7 +218,7 @@ Markdown에서는 여러 문법을 함께 사용할 수 있습니다.
 
 export const story: StoryWithAuthor = {
   id: '1',
-  thumbnailUrl: 'https://picsum.photos/seed/react2/600/400',
+  thumbnailUrl: 'https://picsum.dev/600/400',
   title: 'Understanding React Server Components',
   summary:
     'A deep dive into React Server Components and how they change the way we build applications.',
