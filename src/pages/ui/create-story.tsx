@@ -1,4 +1,4 @@
-import { PencilLineIcon } from 'lucide-react';
+import { EyeIcon, PencilLineIcon } from 'lucide-react';
 import { StoryForm } from '~/entities/story';
 import { Button } from '~/shared/ui';
 import { Header } from '~/widgets/header';
@@ -16,8 +16,8 @@ const Page = () => (
     <Header
       text="compose"
       actions={[
-        <Button title="temporary save" variant="icon">
-          <PencilLineIcon />
+        <Button title="preview" variant="icon">
+          <EyeIcon />
         </Button>,
         <Button title="save" variant="icon">
           <PencilLineIcon />
