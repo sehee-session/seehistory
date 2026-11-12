@@ -1,8 +1,9 @@
 import { Tabs } from '@base-ui/react/tabs';
-import { RssIcon, TrendingUpIcon } from 'lucide-react';
+import { PencilLineIcon, RssIcon, TrendingUpIcon } from 'lucide-react';
 import { useSearchParams } from 'react-router';
 import { StoryCard } from '~/entities/story';
 import { UserAuthor } from '~/entities/user';
+import { Button } from '~/shared/ui';
 import { Header } from '~/widgets/header';
 import { stories } from '../lib/mock.stories';
 import * as styles from './stories.css';
@@ -47,7 +48,14 @@ const Page = () => {
 
   return (
     <main>
-      <Header text="stories" />
+      <Header
+        text="stories"
+        actions={[
+          <Button variant="icon">
+            <PencilLineIcon />
+          </Button>,
+        ]}
+      />
 
       <Tabs.Root
         className={styles.root}

@@ -1,4 +1,6 @@
+import { PencilLineIcon } from 'lucide-react';
 import { StoryForm } from '~/entities/story';
+import { Button } from '~/shared/ui';
 import { Header } from '~/widgets/header';
 
 export const meta = [
@@ -11,7 +13,17 @@ export const meta = [
 
 const Page = () => (
   <>
-    <Header text="compose" />
+    <Header
+      text="compose"
+      actions={[
+        <Button title="temporary save" variant="icon">
+          <PencilLineIcon />
+        </Button>,
+        <Button title="save" variant="icon">
+          <PencilLineIcon />
+        </Button>,
+      ]}
+    />
     <StoryForm />
   </>
 );

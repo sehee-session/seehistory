@@ -14,3 +14,9 @@ export const logo = style({
   fontWeight: vars.fontWeight.bold,
   letterSpacing: '-0.04em',
 });
+
+export const actions = style({
+  display: 'flex',
+  alignItems: 'center',
+  gap: vars.spacing.sm,
+});

@@ -12,7 +12,7 @@ export const ColorModeToggle = () => {
       onClick={toggle}
       disabled={isSubmitting}
     >
-      {isDark ? <MoonIcon size={16} /> : <SunIcon size={16} />}
+      {isDark ? <MoonIcon /> : <SunIcon />}
     </Button>
   );
 };

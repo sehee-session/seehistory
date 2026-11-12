@@ -1,4 +1,4 @@
-import { style, styleVariants } from '@vanilla-extract/css';
+import { globalStyle, style, styleVariants } from '@vanilla-extract/css';
 import { vars } from '../styles/theme.css';
 
 const base = style({
@@ -24,6 +24,11 @@ const base = style({
     opacity: 0.5,
     cursor: 'not-allowed',
   },
+});
+
+globalStyle(`${base} > svg`, {
+  width: vars.size.md,
+  height: vars.size.md,
 });
 
 export const buttonVariants = styleVariants({

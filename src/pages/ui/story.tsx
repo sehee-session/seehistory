@@ -1,6 +1,7 @@
+import { PencilLineIcon } from 'lucide-react';
 import { formatDate } from '~/entities/story';
 import { UserInfo } from '~/entities/user';
-import { MarkdownToc, MarkdownViewer } from '~/shared/ui';
+import { Button, MarkdownToc, MarkdownViewer } from '~/shared/ui';
 import { Header } from '~/widgets/header';
 import { story } from '../lib/mock.story';
 import { user } from '../lib/mock.user';
@@ -16,7 +17,14 @@ export const meta = () => [
 const Page = () => {
   return (
     <>
-      <Header text="stories" />
+      <Header
+        text="stories"
+        actions={[
+          <Button variant="icon">
+            <PencilLineIcon />
+          </Button>,
+        ]}
+      />
       <UserInfo {...user} />
       <h1>{story.title}</h1>
       <time dateTime={story.createdAt}>{formatDate(story.createdAt)}</time>

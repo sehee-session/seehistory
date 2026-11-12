@@ -1,5 +1,7 @@
+import { PencilLineIcon } from 'lucide-react';
 import { StoryCard } from '~/entities/story';
 import { UserInfo } from '~/entities/user';
+import { Button } from '~/shared/ui';
 import { Header } from '~/widgets/header';
 import { stories } from '../lib/mock.stories';
 import { user } from '../lib/mock.user';
@@ -19,7 +21,14 @@ const Page = ({ params }: Route.ComponentProps) => {
 
   return (
     <>
-      <Header text={`${nickname}`} />
+      <Header
+        text={`${nickname}`}
+        actions={[
+          <Button variant="icon">
+            <PencilLineIcon />
+          </Button>,
+        ]}
+      />
       <UserInfo {...user} />
       <div className={styles.list}>
         {stories.map((story) => (
