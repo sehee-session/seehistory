@@ -8,40 +8,84 @@ import {
   StrikethroughIcon,
   TableIcon,
 } from 'lucide-react';
+import { HEADING_SELECT, MARKDOWN_STRATEGIES } from '../constants/md-helper';
 import { Button } from './button';
 import * as styles from './md-helper.css';
 
-export const MarkdownHelper = () => {
+type MarkdownStrategyValue =
+  (typeof MARKDOWN_STRATEGIES)[keyof typeof MARKDOWN_STRATEGIES]['value'];
+
+export const MarkdownHelper = ({
+  textareaRef,
+  onChangeTextarea,
+}: {
+  textareaRef: React.RefObject<HTMLTextAreaElement | null>;
+  onChangeTextarea: (value: string) => void;
+}) => {
+  const onApplyStrategy = (key: keyof typeof MARKDOWN_STRATEGIES) => {
+    const textarea = textareaRef.current;
+    if (!textarea) return;
+
+    const result = MARKDOWN_STRATEGIES[key].execute({
+      value: textarea.value,
+      selectionStart: textarea.selectionStart,
+      selectionEnd: textarea.selectionEnd,
+    });
+
+    onChangeTextarea(result.text);
+
+    requestAnimationFrame(() => {
+      textarea.focus();
+      textarea.setSelectionRange(result.selectionStart, result.selectionEnd);
+    });
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.group}>
         <select
           className={styles.headingSelect}
           aria-label="Heading"
-          defaultValue="paragraph"
+          defaultValue={MARKDOWN_STRATEGIES.paragraph.value}
+          onChange={(event) =>
+            onApplyStrategy(event.target.value as MarkdownStrategyValue)
+          }
         >
-          <option value="paragraph">본문</option>
-          <option value="h1">Heading 1</option>
-          <option value="h2">Heading 2</option>
-          <option value="h3">Heading 3</option>
-          <option value="h4">Heading 4</option>
-          <option value="h5">Heading 5</option>
-          <option value="h6">Heading 6</option>
+          {HEADING_SELECT.map((action) => (
+            <option key={action.value} value={action.value}>
+              {action.label}
+            </option>
+          ))}
         </select>
       </div>
 
       <div className={styles.group}>
-        <Button variant="icon" type="button" aria-label="Bold" title="Bold">
+        <Button
+          variant="icon"
+          type="button"
+          aria-label={MARKDOWN_STRATEGIES.bold.label}
+          title={MARKDOWN_STRATEGIES.bold.label}
+          onClick={() => onApplyStrategy(MARKDOWN_STRATEGIES.bold.value)}
+        >
           <BoldIcon />
         </Button>
-        <Button variant="icon" type="button" aria-label="Italic" title="Italic">
+        <Button
+          variant="icon"
+          type="button"
+          aria-label={MARKDOWN_STRATEGIES.italic.label}
+          title={MARKDOWN_STRATEGIES.italic.label}
+          onClick={() => onApplyStrategy(MARKDOWN_STRATEGIES.italic.value)}
+        >
           <ItalicIcon />
         </Button>
         <Button
           variant="icon"
           type="button"
-          aria-label="Strikethrough"
-          title="Strikethrough"
+          aria-label={MARKDOWN_STRATEGIES.strikethrough.label}
+          title={MARKDOWN_STRATEGIES.strikethrough.label}
+          onClick={() =>
+            onApplyStrategy(MARKDOWN_STRATEGIES.strikethrough.value)
+          }
         >
           <StrikethroughIcon />
         </Button>
@@ -51,31 +95,48 @@ export const MarkdownHelper = () => {
         <Button
           variant="icon"
           type="button"
-          aria-label="Code block"
-          title="Code block"
+          aria-label={MARKDOWN_STRATEGIES.codeBlock.label}
+          title={MARKDOWN_STRATEGIES.codeBlock.label}
+          onClick={() => onApplyStrategy(MARKDOWN_STRATEGIES.codeBlock.value)}
         >
           <CodeIcon />
         </Button>
         <Button
           variant="icon"
           type="button"
-          aria-label="Unordered list"
-          title="Unordered list"
+          aria-label={MARKDOWN_STRATEGIES.unorderedList.label}
+          title={MARKDOWN_STRATEGIES.unorderedList.label}
+          onClick={() =>
+            onApplyStrategy(MARKDOWN_STRATEGIES.unorderedList.value)
+          }
         >
           <ListIcon />
         </Button>
         <Button
           variant="icon"
           type="button"
-          aria-label="Ordered list"
-          title="Ordered list"
+          aria-label={MARKDOWN_STRATEGIES.orderedList.label}
+          title={MARKDOWN_STRATEGIES.orderedList.label}
+          onClick={() => onApplyStrategy(MARKDOWN_STRATEGIES.orderedList.value)}
         >
           <ListOrderedIcon />
         </Button>
-        <Button variant="icon" type="button" aria-label="Link" title="Link">
+        <Button
+          variant="icon"
+          type="button"
+          aria-label={MARKDOWN_STRATEGIES.link.label}
+          title={MARKDOWN_STRATEGIES.link.label}
+          onClick={() => onApplyStrategy(MARKDOWN_STRATEGIES.link.value)}
+        >
           <LinkIcon />
         </Button>
-        <Button variant="icon" type="button" aria-label="Table" title="Table">
+        <Button
+          variant="icon"
+          type="button"
+          aria-label={MARKDOWN_STRATEGIES.table.label}
+          title={MARKDOWN_STRATEGIES.table.label}
+          onClick={() => onApplyStrategy(MARKDOWN_STRATEGIES.table.value)}
+        >
           <TableIcon />
         </Button>
         <Button
@@ -83,6 +144,7 @@ export const MarkdownHelper = () => {
           type="button"
           aria-label="Footnote"
           title="Footnote"
+          onClick={() => onApplyStrategy(MARKDOWN_STRATEGIES.footnote.value)}
         >
           <span className={styles.footnoteIcon}>¹</span>
         </Button>
