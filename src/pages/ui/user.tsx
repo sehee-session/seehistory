@@ -1,6 +1,7 @@
 import { PencilLineIcon } from 'lucide-react';
 import { StoryCard } from '~/entities/story';
 import { UserInfo } from '~/entities/user';
+import { PATHS } from '~/shared/constants';
 import { Button } from '~/shared/ui';
 import { Header } from '~/widgets/header';
 import { stories } from '../lib/mock.stories';
@@ -9,22 +10,22 @@ import type { Route } from './+types/user';
 import * as styles from './user.css';
 
 export const meta = ({ params }: Route.MetaArgs) => [
-  { title: `${params.nickname}'s history` },
+  { title: `${params.id}'s history` },
   {
     name: 'description',
-    content: `Explore ${params.nickname}'s developer stories and experiences.`,
+    content: `Explore ${params.id}'s developer stories and experiences.`,
   },
 ];
 
 const Page = ({ params }: Route.ComponentProps) => {
-  const { nickname } = params;
+  const { id } = params;
 
   return (
     <>
       <Header
-        text={`${nickname}`}
+        text={`${id}`}
         actions={[
-          <Button variant="icon">
+          <Button key="write" variant="icon" to={PATHS.STORY.WRITE}>
             <PencilLineIcon />
           </Button>,
         ]}

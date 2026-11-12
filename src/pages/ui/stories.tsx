@@ -1,8 +1,8 @@
 import { Tabs } from '@base-ui/react/tabs';
-import { PencilLineIcon, RssIcon, TrendingUpIcon } from 'lucide-react';
-import { useSearchParams } from 'react-router';
+import { PencilLineIcon, RssIcon } from 'lucide-react';
 import { StoryCard } from '~/entities/story';
 import { UserAuthor } from '~/entities/user';
+import { PATHS } from '~/shared/constants';
 import { Button } from '~/shared/ui';
 import { Header } from '~/widgets/header';
 import { stories } from '../lib/mock.stories';
@@ -17,51 +17,23 @@ export const meta = () => [
 ];
 
 const TAB = {
-  TRENDING: 'trending',
   LATEST: 'latest',
 } as const;
 
-const tabs = [
-  { label: 'Trending', value: TAB.TRENDING, Icon: TrendingUpIcon },
-  { label: 'Latest', value: TAB.LATEST, Icon: RssIcon },
-];
+const tabs = [{ label: 'Latest', value: TAB.LATEST, Icon: RssIcon }];
 
 const Page = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  const sort = searchParams.get('sort');
-  const activeTab = sort === TAB.LATEST ? TAB.LATEST : TAB.TRENDING;
-
-  const handleTabChange = (value: string | number) => {
-    setSearchParams((current) => {
-      const next = new URLSearchParams(current);
-
-      if (value === TAB.LATEST) {
-        next.set('sort', TAB.LATEST);
-      } else {
-        next.delete('sort');
-      }
-
-      return next;
-    });
-  };
-
   return (
     <main>
       <Header
         text="stories"
         actions={[
-          <Button variant="icon">
+          <Button key="write" variant="icon" to={PATHS.STORY.WRITE}>
             <PencilLineIcon />
           </Button>,
         ]}
       />
-
-      <Tabs.Root
-        className={styles.root}
-        value={activeTab}
-        onValueChange={handleTabChange}
-      >
+      <Tabs.Root className={styles.root} value={TAB.LATEST}>
         <Tabs.List className={styles.list}>
           {tabs.map(({ label, value, Icon }) => (
             <Tabs.Tab key={value} className={styles.tab} value={value}>
@@ -70,14 +42,6 @@ const Page = () => {
           ))}
           <Tabs.Indicator className={styles.indicator} />
         </Tabs.List>
-        <Tabs.Panel className={styles.panel} value={TAB.TRENDING}>
-          {stories.map((story) => (
-            <article key={story.id} className={styles.panelItem}>
-              <UserAuthor {...story.author} />
-              <StoryCard {...story} />
-            </article>
-          ))}
-        </Tabs.Panel>
         <Tabs.Panel className={styles.panel} value={TAB.LATEST}>
           {stories.map((story) => (
             <article key={story.id} className={styles.panelItem}>

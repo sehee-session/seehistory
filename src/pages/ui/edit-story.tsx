@@ -24,10 +24,15 @@ const Page = () => {
       <Header
         text={preview ? 'preview' : 'compose'}
         actions={[
-          <Button title="preview" variant="icon" onClick={onTogglePreview}>
+          <Button
+            key="preview"
+            title="preview"
+            variant="icon"
+            onClick={onTogglePreview}
+          >
             {preview ? <PencilLineIcon /> : <EyeIcon />}
           </Button>,
-          <Button title="save" variant="icon">
+          <Button key="save" title="save" variant="icon">
             <SaveIcon />
           </Button>,
         ]}

@@ -1,16 +1,14 @@
-import { type RouteConfig, route } from '@react-router/dev/routes';
+import { type RouteConfig, index, route } from '@react-router/dev/routes';
 
 export default [
-  // index('pages/ui/home.tsx'),
-
   // story
-  // route('stories', 'pages/ui/stories.tsx'),
+  index('pages/ui/stories.tsx'),
   route('stories/new', 'pages/ui/create-story.tsx'),
   route('stories/:id', 'pages/ui/story.tsx'),
   route('stories/:id/edit', 'pages/ui/edit-story.tsx'),
 
   // user
-  route('users/:nickname', 'pages/ui/user.tsx'),
+  route('users/:id', 'pages/ui/user.tsx'),
 
   // theme
   route('color-mode', 'api/action/color-mode.ts'),
