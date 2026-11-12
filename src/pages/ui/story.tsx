@@ -1,5 +1,4 @@
 import { PencilLineIcon } from 'lucide-react';
-import React from 'react';
 import { formatDate } from '~/entities/story';
 import { UserInfo } from '~/entities/user';
 import { PATHS } from '~/shared/constants';
@@ -28,19 +27,17 @@ const Page = () => {
           </Button>,
         ]}
       />
-      <React.ViewTransition name="story-thumbnail">
-        <div className={styles.thumbnail}>
-          {story.thumbnailUrl ? (
-            <img
-              className={styles.thumbnailImage}
-              src={story.thumbnailUrl}
-              alt=""
-            />
-          ) : (
-            <span>~/story</span>
-          )}
-        </div>
-      </React.ViewTransition>
+      <div className={styles.thumbnail}>
+        {story.thumbnailUrl ? (
+          <img
+            className={styles.thumbnailImage}
+            src={story.thumbnailUrl}
+            alt=""
+          />
+        ) : (
+          <span>~/story</span>
+        )}
+      </div>
       <h1>{story.title}</h1>
       <time dateTime={story.createdAt}>{formatDate(story.createdAt)}</time>
       <MarkdownViewer {...story} />
