@@ -6,7 +6,7 @@ export const container = style({
   padding: vars.spacing.sm,
 
   border: 'none',
-  borderBottom: `1px solid ${vars.color.border}`,
+  borderBottom: `2px solid ${vars.color.border}`,
   outline: 'none',
   background: 'transparent',
 
